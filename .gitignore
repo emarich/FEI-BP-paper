@@ -14,3 +14,13 @@
 *.out
 *.xml
 *.toc
+# my ignores
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.lol
+*.synctex.gz
