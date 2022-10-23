@@ -1,0 +1,25 @@
+Of. struktura: (https://uim.fei.stuba.sk/predmet/b-bp1-ai/)
+	Uvod prace (oboznamenie)
+	Teoreticka cast (definicie)
+	Analyticka cast (analyza existujucich rieseni)
+	Navrhova cast (architektura, use case, data-flow, ...)
+	Implementacna casr
+	Vysledky a testovanie
+	Zaver prace
+________________________________________________________________________
+
+Teoreticka cast (analyza) = zakladne koncepty a pojmy
+	vsetko co som si k tomu precitala
+
+
+SW a HW peostriedky = pouzite prostriedky (aj nad cim som sa zamyslala)
+	.
+
+Sucastny stav problematiky + ako ho chceme doplnit
+	.
+
+Ciele prace (formulacia)
+	.
+
+Prakticka cast (implementacia)
+	.
