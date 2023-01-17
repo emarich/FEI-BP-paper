@@ -440,6 +440,36 @@
     \newpage
 }
 
+\newcommand\FEIdeclaration[1]{
+    \pagestyle{empty}
+    \vspace*{120mm}
+    \IfEqCase*{\FEIenglish}{
+        {0}{\section*{\fontsize{22pt}{1.3}\selectfont Vyhl\'{a}senie autora }   
+            Podp\'{i}san\IfEqCase*{\FEIgen}{{0}{\'{y}(\'{a})}{1}{\'{y}}{2}{\'{a}}}[]
+            \printAutor \ \v{c}estne vyhlasujem, \v{z}e som \typPraceTemp \ \printNazov \ vypracoval\IfEqCase*{\FEIgen}{{0}{(a)}{1}{}{2}{a}}[]
+            na z\'{a}klade poznatkov z\'{i}skan\'{y}ch po\v{c}as \v{s}t\'{u}dia a inform\'{a}ci\'{i} z dostupnej literat\'{u}ry uvedenej v pr\'{a}ci.
+            \newline
+            \indent Ved\'{u}cim mojej \typPraceTempII ~bol \IfEndWith{\@veduciZaverecnejPrace}{.}{\StrGobbleRight{\@veduciZaverecnejPrace}{1}}{\@veduciZaverecnejPrace}.
+            \newline\newline
+            \printMesto, d\v{n}a \printDatum
+            \newline \newline \newline
+            \begin{flushleft}
+                {
+                    \hfill
+                    ............................................\\
+                    \hfill
+                    podpis autora  \hspace*{1cm}
+                }
+            \end{flushleft}}
+        {1}{
+            \section*{\fontsize{22pt}{1.3}\selectfont Declaration } 
+            \input{#1}
+        }
+        }[]
+        
+    \newpage
+}
+
 \newcommand\FEIthanks[1]{
     \pagestyle{empty}
     \vspace*{120mm}
