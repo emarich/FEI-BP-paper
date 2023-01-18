@@ -1,10 +1,15 @@
-\section{Analýza}%%%%%%%%%%%%%
-
-\subsection{Definícia motion capture}%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Motion capture} % Analýza
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Definícia}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \noindent\acrfull{mocap} je technológia, ktorá zaznamenáva pohyby objektov, zvierat alebo ľudí v reálnom svete a prenáša tieto dáta do virtuálneho prostredia pre okamžitú alebo oneskorenú analýzu alebo prehrávanie. Táto technológia sa zrodila pri inovácii spôsobu animovania seriálov a filmov, kedy sa do tohoto procesu začali komponovať aj počítače.
 
-\subsection{História motion capture}%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{História}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Prvý pohyb charakteru v podobe animácie nám priniesol v roku 1911 karikaturista Zenas Winsor McCay. Pomocou viacerých kusov papieru, na ktorých boli zakreslené len jemné zmeny tej istej postavy, pri konštatnej rýchlosti prekladania týchto papierov vytváral ilúziu pohybu. Ale vytvoriť takúto animáciu bolo veľmi časovo náročné pre animátora, keďže každá snímka musela byť odznova individuálne nakreslená \cite{mocapFundamentals}.
 
@@ -29,17 +34,17 @@ Táto technika kopírovania pohybu však už bola vynájdená skôr animátorom 
 \begin{figure}[!htbp]
   \centering
   \includegraphics[width=6cm]{img/firstMechMocapSuit.jpg}
-  \caption{Prvý mechanický motion capture oblek vyvinutý na USF}
+  \caption{Prvý mechanický motion-capture oblek vyvinutý na SFU}
   \label{mechMocapFig}
 \end{figure}
 
-V rokoch 1980 až 1983 na Univerzite Simona Frasera (USF) v biomechanických laboratóriach sa začali používať počítače na analýzu ľudského pohybu. Technika a zariadenia využívané v ich štúdiach si našli uplatnenie aj v odvetví počítačovej grafiky. Profesor kineziológie a počítačových vied na USF Tom Calvert využitím potenciometrov (potenciometer = premenný rezistor, ktorého odpor sa dá lineárnym pohybom alebo otočením meniť), ktoré pripojil k telu človeka, zaznamenával tak pohyb človeka a tým ovládal počítačom animovanú postavu pre choreografické a klinické výskumné účely, ako napríklad skúmanie pohybových abnormalít. Pre príklad na skúmanie ohybu kolena pripútali na každú nohu exoskeleton s potenciometrom, ktorý bol umiestnený pozdĺž každého kolena, tak aby sa ohýbal v súlade s kolenom. Takto bol vyvinutý prvý mechanický motion capture oblek na snímanie pohybov, kedy zobrali analógový výstup pohybu a previedli ho do digitálnych dát, ktoré boli spracované ich animačným systémom v počítači. No toto riešenie bolo mierne nepohodlné v rozmedzí dynamickejších pohybov.
+V rokoch 1980 až 1983 na Simon Fraser Univerzity (SFU) v biomechanických laboratóriach sa začali používať počítače na analýzu ľudského pohybu. Technika a zariadenia využívané v ich štúdiach si našli uplatnenie aj v odvetví počítačovej grafiky. Profesor kineziológie a počítačových vied na SFU Tom Calvert využitím potenciometrov (t.j. premenný rezistor, ktorého odpor sa dá lineárnym pohybom alebo otočením meniť), ktoré pripojil k telu človeka, zaznamenával tak pohyb človeka a tým ovládal počítačom animovanú postavu pre choreografické a klinické výskumné účely, ako napríklad skúmanie pohybových abnormalít. Pre príklad na skúmanie ohybu kolena pripútali na každú nohu exoskeleton s potenciometrom, ktorý bol umiestnený pozdĺž každého kolena, tak aby sa ohýbal v súlade s kolenom. Takto bol vyvinutý prvý mechanický motion-capture oblek na snímanie pohybov, kedy zobrali analógový výstup pohybu a previedli ho do digitálnych dát, ktoré boli spracované ich animačným systémom v počítači. No toto riešenie bolo mierne nepohodlné v rozmedzí dynamickejších pohybov.
 
-Medzitým na Massachusettskom Technologickom Inštitúte (MIT) a Newyorskom Technologickom Inštitúte (NYIT) experimentovali s technológiou zachytávania pohybu ľudského tela s využitím optického zaznamenávacieho systému. \acrlong{mocap} oblek je vybavený malými značkami, ktoré sú pripevnené k telu. Tieto značky predstavujú buď blikajúce \acrshort{led} svetlá alebo malé reflexné body. Takto skonštruovaný oblek zachytáva séria dvoch alebo viacerých kamier. Kombináciou špeciálneho hardvéru a softvéru sa z kamerového záznamu vyberajú vyššie spomínané značky z vizuálneho poľa každej kamery a porovnávaním týchto snímkov sa kalkuluje pozícia každej značky v trojrozmernom priestore za prejdený čas záznamu.
-No táto technológia je obmedzená rýchlosťou pohybu značiek (koľko pozícií značiek vie kamera zachytiť za sekunku). Toto obmedzenie má za následok rozlíšenie kamier, hlavne ich schopnosť rozoznať značky, ktoré sú blízko seba. Prvotné systémy vedeli zaznamenávať len zopár značiek naraz. Moderné systémy zvládnu spracovávať niekoľko desiatok značiek naraz. Tento problém sa vie redukovať nasadením viac sledovacích kamier, ale aj pri takomto riešení aj v moderných systémoch je potrebný manuálny post-processing záznamov, aby sa poupravili alebo obnovili trajektórie značiek, ktoré sa stratili z výhľadu kamery. Čiže pri tomto type technológie treba nájsť rovnováhu, lebo dá sa vyhnúť manuálnemu post-processingu, keď sa zainvestuje do viacero kamier alebo do kamery s kvalitnejším záznamom (vyšším rozlíšením). To nám taktiež vie zvýšiť aj zorné pole záznamu a teda aj rozsah pohybov, ktoré je možné natočiť. Aj s jednou kamerou pri dostatočnom priblížení vieme odstrániť problém stratených značiek, ale to nám obmedzuje rozsah pohybov, lebo zmenšíme zorné pole kamery. A kvôli všetkým týmto problematickým riešeniam optimalizácie procesovania záznamu aj v dnešnej dobe sa pri optickom type motion capture oblekov spoliehajú na post-procesing postupy, kvôli anlýze, sprocesovaní a dolaďovaní dát predtým ako sa aplikujú na animovanú postavu.
-Tento typ motion capture systémov sa aj skomercializoval v odvetví počitačovej grafiky (napr. systémy Op-Eye alebo SelSpot).
+Medzitým na Massachusetts Institute of Technology (MIT) a New York Institute of Technology (NYIT) experimentovali s technológiou zachytávania pohybu ľudského tela s využitím optického zaznamenávacieho systému. \acrlong{mocap} oblek je vybavený malými značkami, ktoré sú pripevnené k telu. Tieto značky predstavujú buď blikajúce \acrshort{led} svetlá alebo malé reflexné body. Takto skonštruovaný oblek zachytáva séria dvoch alebo viacerých kamier. Kombináciou špeciálneho hardvéru a softvéru sa z kamerového záznamu vyberajú vyššie spomínané značky z vizuálneho poľa každej kamery a porovnávaním týchto snímkov sa kalkuluje pozícia každej značky v trojrozmernom priestore za prejdený čas záznamu.
+No táto technológia je obmedzená rýchlosťou pohybu značiek (koľko pozícií značiek vie kamera zachytiť za sekunku). Toto obmedzenie má za následok rozlíšenie kamier, hlavne ich schopnosť rozoznať značky, ktoré sú blízko seba. Prvotné systémy vedeli zaznamenávať len zopár značiek naraz. Moderné systémy zvládnu spracovávať niekoľko desiatok značiek naraz. Tento problém sa vie redukovať nasadením viac sledovacích kamier, ale aj pri takomto riešení aj v moderných systémoch je potrebný manuálny post-processing záznamov, aby sa poupravili alebo obnovili trajektórie značiek, ktoré sa stratili z výhľadu kamery. Čiže pri tomto type technológie treba nájsť rovnováhu, lebo dá sa vyhnúť manuálnemu post-processingu, keď sa zainvestuje do viacero kamier alebo do kamery s kvalitnejším záznamom (vyšším rozlíšením). To nám taktiež vie zvýšiť aj zorné pole záznamu a teda aj rozsah pohybov, ktoré je možné natočiť. Aj s jednou kamerou pri dostatočnom priblížení vieme odstrániť problém stratených značiek, ale to nám obmedzuje rozsah pohybov, lebo zmenšíme zorné pole kamery. A kvôli všetkým týmto problematickým riešeniam optimalizácie procesovania záznamu aj v dnešnej dobe sa pri optickom type motion-capture oblekov spoliehajú na post-procesing postupy, kvôli anlýze, sprocesovaní a dolaďovaní dát predtým ako sa aplikujú na animovanú postavu.
+Tento typ motion-capture systémov sa aj skomercializoval v odvetví počitačovej grafiky (napr. systémy Op-Eye alebo SelSpot).
 
-V nasledujúcich rokoch prichádzali rôzne experimenty v oblasti motion capture systémov. 
+V nasledujúcich rokoch prichádzali rôzne experimenty v oblasti motion-capture systémov. 
 
 Napríklad prvé animovanie tváre ešte aj v reálnom čase bolo poňaté ako bábkoherectvo, kedy na ovládanie významných častí tváre, ktoré v určitých pozíciach predstavujú ľudské výrazy, používali špeciálne upravený ovládač, ktorý ovládal bábkoherec. On mal pod kontorlou pohyby úst, očí, výrazov a polohu hlavy. Tento systém bol vyvinutý firmou deGraf/Wahrman. Bol zostrojený digitálnym animátorom Michaelom Wahrmanom a bývalým riaditeľom digitálnej produkcie Bradom deGrafom v roku 1987. V roku 1988 stvorili ,,Mike the Talking Head'' (slovensky ,,\textit{Rozprávajúca hlava Mike}'') pre firmu Silicon Graphics, ktorý bol predstavený na živom vystúpení pre filmový a video festival SIGGRAPH.
 
@@ -47,30 +52,107 @@ Tento systém sa za pomoci firmy Pacific Data Images ešte vylepšil a vznikol W
 
 V roku 1992 firma SimGraphics predstavila zaznamenávací systém, tzv. ,,face waldo''. Používala už menšie mechanické senzory pripevnené k brade, perám, lícam a obočiu a elektro-magnetické senzory na podpornej helme. Tento systém už taktiež vedel zaznamenávať a digitalizovať pohyby v reálnom čase \cite{mocapHistory}.
 
-Neskôr sa rôzne typy týchto systémov spájali a značne urýchlovali proces animovania alebo vedeli animovať väčšie časti charakterov v lepšom rozlíšení alebo viac charakterov naraz. Taktiež redukovali počet aktérov potrebných pri animovaní jedného charakteru.
+Neskôr sa rôzne typy týchto systémov spájali a značne urýchlovali proces animovania alebo vedeli animovať väčšie časti charakterov v lepšom rozlíšení alebo viac charakterov naraz. Taktiež zredukovali počet aktérov potrebných pri animovaní jedného charakteru.
 
-\subsection{Motion capture v súčastnosti}%%%%%%%%%%%%%
+% V ďalších podsekciách analýzy priblížime používané metódy a procesy, ako aj spracovanie dát a ich formáty, ktoré sa využívajú v moderných motion-capture systémoch. Nakoniec si priblížime, čo by nám v budúcnosti mohol prinesť ďalší vývoj a výskumy v oblasti týchto systémov.
 
-Rôzne prístupy pri historickom vývoji mocap systémov nám ich rozdelilo na rôzne typy ako sú akustické, mechanické, optické alebo magnetické \cite{mocapFundamentals}.
-Dnes tieto systémy majú široké využitie v rôznych odvetviach ako je zábavný priemysel (filmy, seriály, animácie, počítačové hry), ale aj v zdravotníctve, športe a armáde. Vie ponúknuť veľmi rýchle, efektívne a finančne prijateľné spracovanie pohybov tela a/alebo tváre pre vytvorenie animácií rôznych charakterov. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Typy motion-capture systémov}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-V ďalších sekciách analýzy priblížime použité metódy a procesy, ako aj spracovanie dát a ich formáty, ktoré sú najpoužívanejšie v moderných mocap systémoch. Nakoniec 
-V ďaľšej sekcii (\ref{ssec:hw}) si priblížime nami použitý mocap oblek \acrfull{pn3}.
+Rôzne prístupy pri historickom vývoji motion-capture systémov nám ich rozdelilo na rôzne typy ako sú akustické, magnetické, mechanické alebo optické. Jednotlivé typy si rozvedieme v nadchádzajúcich podsekciách.
 
-\section{Softvérové a hardvérové prostriedky}%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Akustické motion-capture systémy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Softvér}%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Magnetické motion-capture systémy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Hardvér}%%%%%%%%%%%%%
-\label{ssec:hw}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Mechanické motion-capture systémy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Súčastný stav problematiky}%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Optické motion-capture systémy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Riešenie problematiky}%%%%%%%%%%%%%
+\cite{mocapFundamentals}
 
-\section{Ciele práce}%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Využitie motion-capture systémov}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Implementácia}%%%%%%%%%%%%%
+Keďže tieto systémy vedia ponúknuť veľmi rýchle, efektívne a finančne prijateľné spracovanie gest a pohybov tela a/alebo tváre, tak dnes majú veľmi široké využitie v rôznych odvetviach ako je zábavný priemysel (filmy, seriály, animácie a grafika, počítačové hry), ale aj v zdravotníctve, športe alebo armáde.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Zábavný priemysel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Zdravotníctvo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Šport}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Armáda}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Inžinierstvo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Iné} % Právo, bezpečnosť a obrana?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Budúce využitie} % ?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Softvérové a hardvérové prostriedky}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Softvér}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Axis Studio}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{\acrshort{api}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Hardvér}\label{ssec:hw}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{\acrlong{pn3}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Súčastný stav problematiky}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Riešenie problematiky}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ciele práce}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Implementácia}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
